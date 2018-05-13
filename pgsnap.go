@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/BurntSushi/toml"
-	"github.com/sparkymat/pgbackup/command"
+	"github.com/sparkymat/pgsnap/command"
 )
 
 type appConfig struct {
