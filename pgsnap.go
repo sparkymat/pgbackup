@@ -22,7 +22,8 @@ func main() {
 	flag.Parse()
 
 	if _, err = toml.DecodeFile(configPath, &config); err != nil {
-		panic(fmt.Sprintf("Unable to load config file. Error: %v", err.Error()))
+		fmt.Fprintf(os.Stderr, "Error: Unable to load config file. %v", err.Error())
+		os.Exit(-1)
 	}
 
 	args := flag.Args()
